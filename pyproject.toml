@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epub-precheck"
+version = "1.0.0"
+description = "Offline pre-checker for EPUB files before upload: mimetype, container, spine, nav, image references, cover, and file sizes."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+requires-python = ">=3.10"
+keywords = ["epub", "kdp", "publishing", "validation", "precheck", "cli"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing :: Markup",
+]
+
+[project.scripts]
+epub-precheck = "epub_precheck.cli:main"
+
+[tool.setuptools]
+packages = ["epub_precheck"]
